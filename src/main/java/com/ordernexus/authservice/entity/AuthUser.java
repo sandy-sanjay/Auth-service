@@ -1,13 +1,15 @@
 package com.ordernexus.authservice.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "auth_users")
-@Getter
-@Setter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class AuthUser {
 
     @Id
@@ -21,5 +23,5 @@ public class AuthUser {
     private String password;
 
     @Column(nullable = false)
-    private String role; // ADMIN
+    private String role;
 }
